@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".CreateWheelActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/DarkGray"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:baselineAligned="true"
+        android:tint="@color/Black"
+        app:backgroundTint="@color/White"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+
+    <!--Create Back Fab-->
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_image_black_24dp" />
+
+    <Button
+        android:id="@+id/choose_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="190dp"
+        android:text="Browse"
+        />
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="120dp"
+        android:text="Confirm"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/create_wheelID"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:layout_gravity="center|bottom"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Wheel ID"
+            android:inputType="text"
+            android:maxLength="10" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
